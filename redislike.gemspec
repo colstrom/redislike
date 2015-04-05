@@ -13,18 +13,9 @@ Gem::Specification.new do |gem|
   gem.executables   = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   gem.require_paths = ['lib']
 
-  gem.add_runtime_dependency 'moneta'
+  gem.add_runtime_dependency 'moneta', '~> 0.8'
 
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'rubocop'
-  gem.add_development_dependency 'flog'
-  gem.add_development_dependency 'flay'
-  gem.add_development_dependency 'roodi'
-  gem.add_development_dependency 'reek'
-  gem.add_development_dependency 'churn'
-  gem.add_development_dependency 'yard'
-  gem.add_development_dependency 'inch'
-  gem.add_development_dependency 'kintama'
-  gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'redis'
+  gem.add_development_dependency 'kintama', '~> 0.1'
+  gem.add_development_dependency 'simplecov', '~> 0.8'
+  gem.add_development_dependency 'redis', '~> 3.2'
 end
