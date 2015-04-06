@@ -6,6 +6,6 @@ SimpleCov.start { add_filter '/vendor/' }
 require 'redis'
 require 'kintama'
 require 'moneta'
+require 'redislike'
 
-require_relative '../lib/redislike'
-require_relative 'redislike/lists'
+require_relative 'compatibility/redislike'

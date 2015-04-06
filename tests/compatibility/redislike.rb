@@ -1,13 +1,7 @@
-context 'List Operations' do
-  def mirror(method, *arguments)
-    original = @original.method(method).call(*arguments)
-    compatible = @compatible.method(method).call(*arguments)
-    [original, compatible]
-  end
+require_relative 'helpers/compatibility'
 
-  def assert_compatible(method, *arguments)
-    assert_equal(*mirror(method, *arguments))
-  end
+context 'List Operations' do
+  include CompatibilityTesting
 
   setup do
     @original = Redis.new
