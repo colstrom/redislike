@@ -11,6 +11,7 @@ context 'LINSERT' do
 
     test 'when pivot is present' do
       assert_equal 2, @db.linsert('test:linsert', :before, 'foo', 'bar')
+      assert @db.lrange('test:linsert', 0, -1).include? 'bar'
     end
 
     test 'when pivot is not present' do
@@ -25,6 +26,7 @@ context 'LINSERT' do
 
     test 'when pivot is present' do
       assert_equal 2, @db.linsert('test:linsert', :after, 'foo', 'bar')
+      assert @db.lrange('test:linsert', 0, -1).include? 'bar'
     end
 
     test 'when pivot is not present' do
