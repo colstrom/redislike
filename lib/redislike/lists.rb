@@ -73,6 +73,8 @@ module RedisLike
     end
 
     def lset(list, index, item)
+      fail KeyError, 'ERR no such key' unless exists(list)
+      fail IndexError, 'ERR index out of range' unless lindex(list, index)
       items = fetch list, []
       items[index] = item
       'OK' if store list, items
