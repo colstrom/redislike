@@ -13,6 +13,11 @@ task :kintama do
   sh 'ruby tests/redislike.rb'
 end
 
+desc 'Verify Compatibility with Redis'
+task :compatibility do
+  sh 'ruby tests/compatibility/redislike.rb'
+end
+
 task audit: [:style, :complexity, :duplication, :design, :documentation]
 
 task style: [:rubocop]
