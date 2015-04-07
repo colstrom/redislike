@@ -6,10 +6,6 @@ context 'LINDEX' do
     @db.lpush 'test:lindex', 'baz'
   end
 
-  teardown do
-    @db.close
-  end
-
   test 'when list does not exist' do
     assert_equal nil, @db.lindex('test:nx', 1)
   end
@@ -23,4 +19,6 @@ context 'LINDEX' do
       assert_equal nil, @db.lindex('test:lindex', 999)
     end
   end
+
+  teardown { @db.close }
 end
