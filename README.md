@@ -32,6 +32,11 @@ Other Supported Operations
 --------------------------
 * EXISTS
 
+Differences from Redis
+----------------------
+* LSET with a non-existent list raises a ```KeyError``` rather than a ```Redis::CommandError```.
+* LSET with an out of range index raises an ```IndexError rather than a ```Redis::CommandError```.
+
 Installation
 ------------
 
