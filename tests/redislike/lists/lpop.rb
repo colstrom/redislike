@@ -17,7 +17,7 @@ context 'LPOP' do
 
     should 'return items from the head of the list' do
       values = 3.times.map { @db.lpop 'test:lpop' }
-      assert_equal ['bar', 'foo', nil], values 
+      assert_equal ['bar', 'foo', nil], values
     end
   end
 
