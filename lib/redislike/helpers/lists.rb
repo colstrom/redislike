@@ -35,6 +35,10 @@ module RedisLike
         # store list, remaining
         # items.length - remaining.length
       end
+
+      def block_while_empty(list, interval = 0.010)
+        sleep interval until llen(list) > 0
+      end
     end
   end
 end
