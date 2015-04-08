@@ -1,3 +1,6 @@
+require_relative 'lists/blpop'
+require_relative 'lists/brpop'
+require_relative 'lists/brpoplpush'
 require_relative 'lists/lindex'
 require_relative 'lists/linsert'
 require_relative 'lists/llen'
