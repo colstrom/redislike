@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name        = 'redislike'
-  gem.version     = '0.2.4'
+  gem.version     = '0.2.5'
   gem.licenses    = 'MIT'
   gem.authors     = ['Chris Olstrom']
   gem.email       = 'chris@olstrom.com'
