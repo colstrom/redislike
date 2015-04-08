@@ -7,6 +7,9 @@ redislike adds backend-independent support for redis-like list operations to any
 
 Supported Operations
 --------------------
+* BLPOP
+* BRPOP
+* BRPOPLPUSH
 * LINDEX
 * LINSERT
 * LLEN
@@ -21,12 +24,6 @@ Supported Operations
 * RPOPLPUSH
 * RPUSH
 * RPUSHX
-
-Missing
--------
-* BLPOP
-* BRPOP
-* BRPOPLPUSH
 
 Other Supported Operations
 --------------------------
