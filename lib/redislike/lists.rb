@@ -24,6 +24,11 @@ module RedisLike
       enqueue list, item, to: :tail, allow_create: false
     end
 
+    def blpop(list)
+      block_while_empty list
+      lpop list
+    end
+
     def lpop(list)
       dequeue list, from: :head
     end
