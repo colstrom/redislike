@@ -50,7 +50,7 @@ module RedisLike
 
     def brpoplpush(source, destination)
       block_while_empty source
-      brpoplpush source, destination
+      rpoplpush source, destination
     end
 
     def lindex(list, item)
