@@ -37,6 +37,11 @@ module RedisLike
       dequeue list, from: :tail
     end
 
+    def brpop(list)
+      block_while_empty list
+      rpop list
+    end
+
     def rpoplpush(source, destination)
       item = rpop source
       lpush destination, item
