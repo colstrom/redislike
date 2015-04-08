@@ -48,6 +48,11 @@ module RedisLike
       item
     end
 
+    def brpoplpush(source, destination)
+      block_while_empty source
+      brpoplpush source, destination
+    end
+
     def lindex(list, item)
       fetch(list, []).at item
     end
