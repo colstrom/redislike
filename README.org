@@ -82,8 +82,8 @@
   restructured to align with those provided by Redis, and tests were written to
   guide this process.
 
-  **TL;DR: I wanted RPOPLPUSH in Moneta, didn't define scope boundaries and
-  accidentally reimplemented (some of) Redis.**
+  *TL;DR: I wanted RPOPLPUSH in Moneta, didn't define scope boundaries and
+  accidentally reimplemented (some of) Redis.*
 
 * What's up with the tests?
 
